@@ -184,7 +184,7 @@ export async function POST(req: NextRequest) {
               continue;
             }
 
-            const result = await dispatchTool(tc.function.name);
+            const result = await dispatchTool(tc.function.name, parsedInput);
             send({ type: "tool_result", toolUseId: tc.id, result });
             messages.push({
               role: "tool",

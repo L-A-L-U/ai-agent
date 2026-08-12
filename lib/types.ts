@@ -1,9 +1,11 @@
 export type ToolName =
   | "get_server_metrics"
   | "get_recent_ssh_attempts"
-  | "get_threat_history"
   | "get_threat_geography"
-  | "get_visitor_stats";
+  | "get_visitor_stats"
+  | "query_prometheus"
+  | "search_logs"
+  | "get_active_alerts";
 
 export type ToolResultPayload =
   | { ok: true; data: unknown }
